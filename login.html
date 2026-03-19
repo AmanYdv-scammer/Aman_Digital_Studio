@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="section">
+  <h1>Login</h1>
+
+  <input type="text" id="u" placeholder="Username"><br>
+  <input type="password" id="p" placeholder="Password"><br>
+
+  <button class="btn" onclick="signup()">Sign Up</button>
+  <button class="btn" onclick="login()">Login</button>
+</div>
+
+<script>
+function signup(){
+ localStorage.setItem("u",u.value);
+ localStorage.setItem("p",p.value);
+ alert("Signup success");
+}
+function login(){
+ if(u.value===localStorage.getItem("u") && p.value===localStorage.getItem("p")){
+  alert("Login success");
+  window.location="index.html";
+ } else alert("Wrong details");
+}
+</script>
+
+</body>
+</html>
